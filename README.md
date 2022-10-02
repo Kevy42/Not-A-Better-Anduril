@@ -79,31 +79,51 @@ No idea, never managed to get it working. I'm open to advice.
 ### Decoupled button and aux leds.
 From off, use 6C to cycle through the button led brightness levels (off, low & high) independant of the aux led's!
 
-
 ### Set default (post factory reset) off and lockout switch leds to high and low respectively.
 
 
+### Set default (post factory reset) off and lockout aux leds to high and low disco respectively.
 
 
-###  Complete list of changes
-    - Decoupled switch & aux leds.
-    - Set default (post factory reset) off and lockout switch leds to high and low respectively.
-    - Set default (post factory reset) off and lockout aux leds to high and low disco respectively.
-    - Set default (post factory reset) mode to advanced.
-    - Set default autolock time to 12h.
-    - Disanbled the blink when going in and out of off/lockout mode
-    - Changed momentary from 5C to 5H in off mode.
-    - Set rainbow update interval to 35'ish seconds.
-    - Set default (post factory reset) thermal regulation limit to 50 degrees C.
-    - Enabled blink at ramp floor.
-    - Disabled bikeflasher strobe mode.
-    - Set configuration buzz inactivity duration to 5 sec.
-    - Disabled factory resetting from simple UI
-    - Changed information blink (e.g voltage, firmware version.. etc) readout to use button and or aux leds.
-    - (DISABLED FOR NOW IN ORDER TO SAVE SPACE AND MAKE EVERYTHING COMPILE)
-        Added morse code easter egg (10C from SOS blinky & utility mode)
-    - Added 3C for going back to the previous strobe/blinky & utility mode
-    - Slowed down information blinkout speed and increased ontime for 0's.
-    - Enabled sunset timer in simple UI
-    - Lowered button high ramping threshold.
-    - Increased sumset blink to 10 minutes.
+### Set default (post factory reset) mode to advanced.
+Thank god, that was annoying.
+
+### Set default autolock time to 12h.
+
+
+### Disabled the blink when going in and out of off/lockout mode
+Annoying when you're in the pitch black.
+
+### Changed momentary activation to 5H from off mode.
+No more getting stuck in momentary!
+
+### Set rainbow update interval to 35'ish seconds.
+
+### Set default (post factory reset) thermal regulation limit to 50 degrees C.
+
+### Enabled blink at ramp floor.
+
+### Disabled bikeflasher strobe mode.
+Does anyone use this? if so.. sorry not sorry.
+
+### Set configuration buzz inactivity duration to 5 sec.
+
+### Disabled factory resetting from simple UI
+Insurance :)
+
+### Changed information blink (e.g voltage, firmware version.. etc) readout to use button and or aux leds.
+
+### Added morse code easter egg (10C from SOS blinky & utility mode)
+Disabled for now in order to make everything compile.
+
+### Added 3C for going back to the previous strobe/blinky & utility modes
+
+### Slowed down information blinkout speed and increased ontime for 0's.
+Its finally readable!
+
+### Enabled sunset timer in simple UI
+
+### Lowered ramping mode button led low/high threshold.
+Its much closer to moonlight levels now.
+
+### Increased sunset blink to 10 minutes.
