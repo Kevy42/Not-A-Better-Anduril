@@ -1,0 +1,43 @@
+changes:
+    - Decoupled switch & aux leds.
+    - Set default (post factory reset) off and lockout switch leds to high and low respectively.
+    - Set default (post factory reset) off and lockout aux leds to high and low disco respectively.
+    - Set default (post factory reset) mode to advanced.
+    - Set default autolock time to 12h.
+    - Disabled the blink when going in and out of off/lockout mode.
+    - Changed momentary activation to 5H from off mode.
+    - Set rainbow update interval to 35'ish seconds.
+    - Set default (post factory reset) thermal regulation limit to 50 degrees C.
+    - Enabled blink at ramp floor.
+    - Disabled bikeflasher strobe mode.
+    - Set configuration buzz inactivity duration to 5 sec.
+    - Disabled factory resetting from simple UI
+    - Changed information blink (e.g voltage, firmware version.. etc) readout to use button and or aux leds.
+    - Added morse code easter egg (10C from SOS blinky & utility mode)
+    - Added 3C for going back to the previous strobe/blinky & utility mode
+    - Slowed down information blinkout speed and increased ontime for 0's.
+    - Enabled sunset timer in simple UI
+    - Lowered button high ramping threshold.
+    - Increased sumset blink to 10 minutes.
+
+
+known bugs:
+
+Untested:
+    1. information blink switch/aux led:
+        !defined(USE_BUTTON_LED) && defined(USE_AUX_RGB_LEDS)
+        defined(USE_BUTTON_LED) && !defined(USE_AUX_RGB_LEDS)
+        !defined(USE_BUTTON_LED) && !defined(USE_AUX_RGB_LEDS)
+
+    2. 12h lockout period.
+    
+
+
+Possible future features/changes:
+    - calm candle mode
+    - Add termal throttling indication
+    - ramp up to brightness when turned on
+    - turn aux on in on mode
+    - Brighter party strobe
+    - check code (dont forget to NOT add indicator led support)
+    - reenable blink for lockout/off?
