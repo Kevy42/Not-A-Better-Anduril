@@ -1,6 +1,6 @@
 # Not-A-Better-Anduril... Anduril Fork
 
-###### Definetly not a better version of anduril, i promise.
+###### Definitely not a better version of anduril, i promise.
 
 
 
