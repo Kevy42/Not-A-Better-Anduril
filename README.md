@@ -159,11 +159,13 @@ Its finally readable!
 ### Enabled sunset timer in simple UI
 
 
+### Increased sunset blink to 10 minutes.
+
+
 ### Lowered ramping mode button led low/high threshold.
 Its much closer to moonlight levels now.
 
 
-### Increased sunset blink to 10 minutes.
 
 ## Possible future features/changes
     - calm candle mode
