@@ -173,7 +173,10 @@ https://user-images.githubusercontent.com/31995172/193654878-e496c997-3c6b-47ce-
 
 
 
-### Changed information blink (e.g voltage, firmware version.. etc) readout to use button and or aux leds.
+### Changed information blinkout (e.g voltage, firmware version.. etc) to use button and or aux leds.
+
+### Slowed down information blinkout speed and increased ontime for 0's.
+Its finally readable!
 
 https://user-images.githubusercontent.com/31995172/193655022-5be7fa3b-92c7-43a5-a228-a30834742e71.mp4
 
@@ -186,13 +189,6 @@ Disabled for now in order to make everything compile.
 ### Added 3C for going back to the previous strobe/blinky & utility modes
 
 https://user-images.githubusercontent.com/31995172/193655186-7cf9270e-3f62-4763-8c60-05c1e6160828.mp4
-
-
-
-### Slowed down information blinkout speed and increased ontime for 0's.
-Its finally readable!
-
-https://user-images.githubusercontent.com/31995172/193655022-5be7fa3b-92c7-43a5-a228-a30834742e71.mp4
 
 
 
