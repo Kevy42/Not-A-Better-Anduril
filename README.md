@@ -23,7 +23,7 @@ Before we can start flashing fancy Anduril forks to our lights, we first need to
 
 2. Identify which hex file is needed for the given light using https://ivanthinking.net/thoughts/emisar-d4v2-anduril2-hex-file-selection/
 
-3. Download the hex file from the "Compiled Hex Files" folder.
+3. Download the hex file from the [Releases section](https://github.com/Kevy42/Not-A-Better-Anduril/releases)
 
 Now that you're all set, we can finally start flashing!  
 Now, we can do this the really easy, half easy, or very hard way (cough cough using Shitdows cough cough). Personally recommend Linux for obvious reasons, and firing up a VM nowadays only takes like an hour, so i don't wanna see any wining.. OK?
