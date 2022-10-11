@@ -45,10 +45,10 @@ uint8_t momentary_state(Event event, uint16_t arg) {
         momentary_active = 0;
         set_level(0);
 
-        // Solves a bug where the led is temporarily set to low after each button release. // MODIFICATION
-        // Could technically deep dive into the code and find a better solution, but this one works just fine. // MODIFICATION
+        // Button led gets set in ramping mode (which is triggered by set_level), but doesn't get set back to off // MODIFICATION
+        // when going back to momentary (after button release). So we set it to off after button is released // MODIFICATION
         #ifdef USE_BUTTON_LED // MODIFICATION
-            button_led_set(2); // MODIFICATION
+        button_led_set(0); // MODIFICATION
         #endif // MODIFICATION
 
         //go_to_standby = 1;  // sleep while light is off

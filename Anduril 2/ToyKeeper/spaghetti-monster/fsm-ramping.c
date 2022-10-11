@@ -46,10 +46,10 @@ void set_level(uint8_t level) {
         // use side-facing aux LEDs while main LEDs are on
         if (! go_to_standby) {
         #ifdef USE_INDICATOR_LED
-            indicator_led(((level + 47) > 0) + ((level + 47) > DEFAULT_LEVEL)); // MODIFICATION
+            indicator_led(((level + 49) > 0) + ((level + 47) > DEFAULT_LEVEL)); // MODIFICATION
         #endif
         #ifdef USE_BUTTON_LED
-            button_led_set(((level + 47) > 0) + ((level + 47) > DEFAULT_LEVEL)); // MODIFICATION
+            button_led_set(((level + 49) > 0) + ((level + 47) > DEFAULT_LEVEL)); // MODIFICATION
         #endif
         }
         //if (level > MAX_1x7135) indicator_led(2);
@@ -64,7 +64,7 @@ void set_level(uint8_t level) {
             #ifdef USE_AUX_RGB_LEDS
                 rgb_led_set(0);
                 #ifdef USE_BUTTON_LED
-                    button_led_set(((level + 45) > 0) + ((level + 45) > DEFAULT_LEVEL)); // MODIFICATION
+                    button_led_set(((level + 49) > 0) + ((level + 49) > DEFAULT_LEVEL)); // MODIFICATION
                 #endif
             #endif
         }

@@ -88,10 +88,13 @@ typedef enum {
     #ifdef USE_INDICATOR_LED
     indicator_led_mode_e,
     #endif
-    #ifdef USE_BUTTON_LED // MODIFICATION
-    button_led_off_mode_e, // MODIFICATION
-    button_led_lockout_mode_e, // MODIFICATION
-    #endif // MODIFICATION
+
+    // MODIFICATION (all 4 lines below)
+    #ifdef USE_BUTTON_LED
+    button_led_off_mode_e,
+    button_led_lockout_mode_e,
+    #endif
+
     #ifdef USE_AUX_RGB_LEDS
     rgb_led_off_mode_e,
     rgb_led_lockout_mode_e,
