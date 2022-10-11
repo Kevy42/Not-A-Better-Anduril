@@ -54,7 +54,7 @@ dkms.conf
 
 
 # Toykeepers addons
-#*.hex
+.hex
 .bzr/
 *.elf
 *.o
