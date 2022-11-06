@@ -120,7 +120,7 @@ https://user-images.githubusercontent.com/31995172/193653410-a9cb9897-eca3-4203-
 
 
 
-### Set default autolock time to 12h.
+### Set default autolock time to 4h.
 
 
 

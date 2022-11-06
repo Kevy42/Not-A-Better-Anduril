@@ -78,6 +78,12 @@ uint8_t momentary_state(Event event, uint16_t arg) {
                 #elif defined(USE_AUX_RGB_LEDS)
                 rgb_led_update(0, 0);
                 #endif
+
+                // Button led gets set in ramping mode (which is triggered by set_level), but doesn't get set back to off // MODIFICATION
+                // when going back to momentary (after button release). So we set it to off after button is released // MODIFICATION
+                #ifdef USE_BUTTON_LED // MODIFICATION
+                button_led_set(0); // MODIFICATION
+                #endif // MODIFICATION
             }
         #ifdef USE_STROBE_STATE
         }
