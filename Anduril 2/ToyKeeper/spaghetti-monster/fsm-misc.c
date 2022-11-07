@@ -50,6 +50,9 @@ uint8_t blink_digit(uint8_t num) {
     uint8_t ontime = BLINK_SPEED * 2 / 12;
     if (!num) { ontime = 70; num ++; } // MODIFICATION
 
+    // Note: Have not checked if USE_AUX_RGB_LEDS is as useless as USE_BUTTON_LED yet, so the current
+    // setup could break the blink_digit() for mule versions.
+
     // Flashlight has both button and aux leds. // MODIFICATION
     // Aux leds set to the rgb_led_off_mode state in order to ease the eye strain in very dark envirements. // MODIFICATION
     #if defined(USE_BUTTON_LED) && defined(USE_AUX_RGB_LEDS) // MODIFICATION
@@ -65,7 +68,7 @@ uint8_t blink_digit(uint8_t num) {
         nice_delay_ms(ontime); // MODIFICATION
 
         button_led_current_state = 1; // MODIFICATION
-        rgb_led_update(rgb_led_off_mode, 0); // MODIFICATION
+        rgb_led_update(rgb_led_off_mode >> 1, 0); // Broken, but close enough ig // MODIFICATION
         
         nice_delay_ms(BLINK_SPEED * 3 / 12); // MODIFICATION
 
@@ -74,30 +77,28 @@ uint8_t blink_digit(uint8_t num) {
     } // MODIFICATION
     #endif // MODIFICATION
 
-    // Flashlight only has aux leds. // MODIFICATION
-    #if !defined(USE_BUTTON_LED) && defined(USE_AUX_RGB_LEDS) // MODIFICATION
-    for (; num>0; num--) { // MODIFICATION
-        rgb_led_update(1, 0); // MODIFICATION
-        nice_delay_ms(ontime); // MODIFICATION
-        rgb_led_update(2, 0); // MODIFICATION
-        nice_delay_ms(BLINK_SPEED * 3 / 12); // MODIFICATION
-    } // MODIFICATION
-    #endif // MODIFICATION
-
-    // Flashlight only has button leds. // MODIFICATION
+    // Flashlight has no leds besides main emmiters. // MODIFICATION
     #if defined(USE_BUTTON_LED) && !defined(USE_AUX_RGB_LEDS) // MODIFICATION
     for (; num>0; num--) { // MODIFICATION
-
-        // Using button_led_set() here because we arent calling rgb_led_update(), // MODIFICATION
-        // meaning setting the button led directly is actually possible. // MODIFICATION
-        button_led_set(2); // MODIFICATION
+        set_level(BLINK_BRIGHTNESS); // MODIFICATION
         nice_delay_ms(ontime); // MODIFICATION
-        button_led_set(1); // MODIFICATION
+        set_level(0); // MODIFICATION
         nice_delay_ms(BLINK_SPEED * 3 / 12); // MODIFICATION
     } // MODIFICATION
     #endif // MODIFICATION
 
-    // Flashlight has no leds besides main emmiters. // MODIFICATION
+    // The code below is to satisy the compiler as well as save the day incase Toykeeper/hank decides
+    // to start using USE_BUTTON_LED for its intended purpose.
+    
+    #if !defined(USE_BUTTON_LED) && defined(USE_AUX_RGB_LEDS) // MODIFICATION
+    for (; num>0; num--) { // MODIFICATION
+        rgb_led_update(rgb_led_off_mode, 0); // MODIFICATION
+        nice_delay_ms(ontime); // MODIFICATION
+        rgb_led_update(rgb_led_off_mode >> 1, 0); // Broken, but close enough ig // MODIFICATION
+        nice_delay_ms(BLINK_SPEED * 3 / 12); // MODIFICATION
+    } // MODIFICATION
+    #endif // MODIFICATION
+
     #if !defined(USE_BUTTON_LED) && !defined(USE_AUX_RGB_LEDS) // MODIFICATION
     for (; num>0; num--) { // MODIFICATION
         set_level(BLINK_BRIGHTNESS); // MODIFICATION
@@ -106,6 +107,7 @@ uint8_t blink_digit(uint8_t num) {
         nice_delay_ms(BLINK_SPEED * 3 / 12); // MODIFICATION
     } // MODIFICATION
     #endif // MODIFICATION
+
 
     return nice_delay_ms(BLINK_SPEED * 8 / 12);
 }
