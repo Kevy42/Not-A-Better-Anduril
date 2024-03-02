@@ -5,6 +5,8 @@
 
 
 # About
+DISCLAIMER: Obsolete repo. Most features provided here have already been natively implemented with new releases of Anduril 2: https://github.com/ToyKeeper/anduril
+
 Anduril is great and all, but lacks some basic features and seemingly obvious adjustments.
 So yea, thats what this fork is for. Enjoy!
 
