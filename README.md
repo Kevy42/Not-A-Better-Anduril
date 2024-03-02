@@ -1,23 +1,23 @@
-# Not-A-Better-Anduril... Anduril Fork
+# The Not-A-Better-Anduril... Anduril Fork
 
-###### Definitely not a better version of anduril, i promise.
+###### Definitely not a better version of Anduril, i promise.
 
 
 
 # About
-Anduril is great and all.. but lacks some basic features and seemingly obvious adjustments.
+Anduril is great and all, but lacks some basic features and seemingly obvious adjustments.
 So yea, thats what this fork is for. Enjoy!
 
-But before you proceed, I'd like to mention that this fork is targeted towards HankLights and HankLights only. I tried my best to maintain backwards compatibility with other Anduril based flashlights, but can't guarantee anything given that my collection only consists of HankLights for now. Feel free to open github issues if anything arises.
+But before you proceed, I'd like to mention that this fork is targeted towards HankLights and HankLights only. I tried my best to maintain backwards compatibility with other Anduril based flashlights, but can't guarantee anything given that my collection only consists of HankLights for now.
 
-Oh and, i'm not responsible for you're newly flashed light exploding with a shock wave more powerful than that of Fatman. I'm a certified dumbass who just also just so happens to be a stubborn bastard who doesn't take no for an answere, hence this monstrosity of an Anduril fork.
+Oh and... I'm not responsible for you're newly flashed light exploding with a shock wave more powerful than that of Fatman. I'm a certified dumb-ass who just so happens to be a stubborn bastard who doesn't take no for an answer - hence this monstrosity of an Anduril fork.
 
 Cheers!
 
 
 # Flashing existing hex files
 
-Before we can start flashing fancy Anduril forks to our lights, we first need to identify a few things. So
+Before we can start flashing fancy Anduril forks onto our lights, we first need to identify a few things.
 
 1. Head on over to https://ivanthinking.net/thoughts/anduril-1-or-2-how-to-check-what-version-of-anduril/ and follow the instructions in order to check if your light's running Anduril 1 or 2.
 
@@ -26,12 +26,12 @@ Before we can start flashing fancy Anduril forks to our lights, we first need to
 3. Download the hex file from the [Releases section](https://github.com/Kevy42/Not-A-Better-Anduril/releases)
 
 Now that you're all set, we can finally start flashing!  
-Now, we can do this the really easy, half easy, or very hard way (cough cough using Shitdows cough cough). Personally recommend Linux for obvious reasons, and firing up a VM nowadays only takes like an hour, so i don't wanna see any wining.. OK?
+This can be done the the really easy, half easy, or very hard way (using Windows). Personally recommend Linux for obvious reasons, and firing up a VM nowadays only takes like an hour.
 
 ### Linux
 
 1. Install required packages  
-        `sudo apt-get install avrdude avrdude-doc -y`
+        `sudo apt install avrdude avrdude-doc -y`
 
 2. Connect the flashing kit to your computer and light.
 
@@ -40,9 +40,8 @@ Now, we can do this the really easy, half easy, or very hard way (cough cough us
     
 3. Flash the firmware.  
         `sudo avrdude -c usbasp -p t1634 -u -Uflash:w:[HEX FILE NAME]`  
-Note: Replace [HEX FILE NAME] with the name of the hex file you'd like to flash.
 
-Note (for step 3 and 4): replace `t1634` with the controller type you're light uses.
+Note (for steps 3 and 4): replace `t1634` with the controller type you're light uses.
 
 ### Mac
 Follow https://oweban.org/files/Anduril%20-%20macOS%20guide.pdf
@@ -59,13 +58,13 @@ Follow: https://oweban.org/files/Anduril%20-%20Windows%2010%20guide.pdf
 ### Linux
 
 1. Install required packages.  
-        `sudo apt-get install flex byacc bison gcc libusb-dev libc6-dev`  
-        `sudo apt-get install gcc-avr avr-libc binutils-avr`  
-        `sudo apt-get install avrdude avrdude-doc`
+        `sudo apt install flex byacc bison gcc libusb-dev libc6-dev`  
+        `sudo apt install gcc-avr avr-libc binutils-avr`  
+        `sudo apt install avrdude avrdude-doc`
 
 2. Compile hex files.  
 Navigate to `"/Anduril 2/ToyKeeper/spaghetti-monster/anduril/"` and run `./build-all.sh`  
-Note: Not all builds will compile, and there will be 9 which won't. Any advice on how to get these to compile as well would be much appreciated.
+Note: Not all builds will compile (there will be 9 which won't).
 
 3. Connect the flashing kit to you're computer and light.
 
@@ -74,10 +73,9 @@ Note: Not all builds will compile, and there will be 9 which won't. Any advice o
     
 5. Flash the firmware.  
         `sudo avrdude -c usbasp -p t1634 -u -Uflash:w:[HEX FILE NAME]`  
-Note: Replace [HEX FILE NAME] with the name of the hex file you'd like to flash.
     
 
-Note (for step 4 and 5): replace `t1634` with the controller type you're light uses.
+Note (for steps 4 and 5): replace `t1634` with the controller type you're light uses.
 
 ### Mac & Windows
 No idea, never managed to get it working. I'm open to advice.
